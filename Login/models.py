@@ -1,7 +1,7 @@
 from django.db import models
 
 class User(models.Model):
-    ID = models.IntegerField(verbose_name="ID", primary_key=True)
+    ID = models.AutoField(verbose_name="ID", primary_key=True)
     UserName = models.CharField(max_length=20, verbose_name="Nombre de Usuario", null=True)
     PassWord = models.CharField(max_length=20, verbose_name="Contrasena", null=True)
     Activo = models.BooleanField(default=True, verbose_name="Activo")

@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+        <form class="CardLogin">   
+            <div class="Card-Error-Hidden">Caracteres incorrectos en los campos de usuario y/o contraseña</div>
+		<img src="{% static 'images/Loyola.png' %}" >
+            <h5>inicia sesion con tu usuario y contrasena</h5>
+            <div class="CardLogin-Inputs">
+                <div>
+                    <input placeholder="Ingresa tu usuario" pattern="^[a-zA-Z0-9]+$" type="text">
+                </div>
+                <div>
+                    <input placeholder="Ingresa tu contrasena" pattern="^[a-zA-Z0-9]+$" type="password">
+                </div>
+            </div>
+            <div class="CardLogin-Button">
+                <div>
+                    <a href={% url 'menu' %}> Iniciar Sesion </a>
+                    <!-- <input type="button" value="Iniciar Sesion" href=""> -->
+                </div>
+            </div>
+        </form>
+<script src="{% static 'js/script.js' %}">
+</script>
+</body>
+</html>
